@@ -5,7 +5,7 @@ import java.util.Comparator;
  *
  * @author
  */
-public class Evento implements Comparator {
+public abstract class Evento implements Comparator {
 
     int t, id;
 

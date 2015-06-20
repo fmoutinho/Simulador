@@ -25,7 +25,9 @@ public class EscalonaEvt extends Evento {
     public void run() {
 
         if (estrutura.getConfig().getEscalonador() == 1) {
-            escalonaFifo();
+            Escalonador e = new EscalonadorFIFO(t,estrutura);
+            e.escalona();
+            //escalonaFifo();
         } else {
             JOptionPane.showMessageDialog(null, "Escalonador não suportado.\n\nAltere o parâmetro 'schet_type' em 'config.txt'.");
             estrutura.setErro(1);
