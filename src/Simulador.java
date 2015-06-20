@@ -25,6 +25,12 @@ public class Simulador {
 
             Carregador c = new Carregador(estrutura);
             c.run();
+            
+            int idEscalonador = estrutura.getConfig().getIdEscalonador();
+            //Cria Factory
+            EscalonadorFactory factory = new EscalonadorFactory(estrutura);
+            //Cria Escalonador pedido na config e coloca na estrurura.
+            estrutura.setEscalonador(factory.getEscalonador(idEscalonador));
 
             BuscadorDeEventos b = new BuscadorDeEventos(estrutura);
             b.run();

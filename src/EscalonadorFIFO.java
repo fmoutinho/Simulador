@@ -12,11 +12,10 @@ public class EscalonadorFIFO extends Escalonador {
 
     /**
      *
-     * @param t
      * @param e
      */
-    public EscalonadorFIFO(int t, Estruturas e) {
-        super(t, e);
+    public EscalonadorFIFO(Estruturas e) {
+        super(e);
     }
 
     @Override

@@ -13,7 +13,7 @@ public class Config {
 
     private String entrada;
     private String saida = "output.txt";
-    private int escalonador, plot;
+    private int idEscalonador, plot;
     private int erro = 0;
     
     
@@ -71,8 +71,8 @@ public class Config {
      * 
      * @return código do escalonador a ser utilizado.
      */
-    public int getEscalonador() {
-        return escalonador;
+    public int getIdEscalonador() {
+        return idEscalonador;
     }
 
 
@@ -109,7 +109,7 @@ public class Config {
                 } else if (line.startsWith("sched_type")) {
                     String[] sv = line.split(":");
 
-                    escalonador = Integer.parseInt(sv[1]);
+                    idEscalonador = Integer.parseInt(sv[1]);
 
                 } else if (line.startsWith("plot")) {
                     String[] sv = line.split(":");

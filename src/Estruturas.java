@@ -21,6 +21,7 @@ public class Estruturas {
     private final List<LogLine> log;
     private final Config config;
     private int erro;
+    private Escalonador escalonador;
 
     /**
      *
@@ -35,6 +36,7 @@ public class Estruturas {
         this.cpu = null;
         this.config = c;
         this.erro = 0;
+               
 
     }
 
@@ -44,6 +46,14 @@ public class Estruturas {
      */
     public int getErro() {
         return erro;
+    }
+    
+    public void setEscalonador(Escalonador e){
+        this.escalonador = e;
+    }
+    
+    public Escalonador getEscalonador(){
+        return escalonador;
     }
 
     /**

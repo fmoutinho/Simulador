@@ -6,25 +6,25 @@
  */
 public abstract class Escalonador {
     
-    int t;
+    
 
     Estruturas estrutura;
     
     /**
      *
-     * @param t
      * @param e
      */
-    public Escalonador(int t, Estruturas e) {
-        this.t = t;
+    public Escalonador(Estruturas e) {
+        
         this.estrutura = e;
         
     }
     
     /**
      *
+     * @param t
      */
-    public void escalona(){
+    public void escalona(int t){
         
         esvaziaFilaEscalonador();
 
