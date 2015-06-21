@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author 
+ * @author
  */
 public class Config {
 
@@ -15,15 +15,14 @@ public class Config {
     private String saida = "output.txt";
     private int idEscalonador, plot;
     private int erro = 0;
-    
-    
-     public void Config() {
+
+    public void Config() {
 
     }
 
     /**
      * Retorna o código de erro recebido pelo programa.
-     * 
+     *
      * @return código do erro.
      */
     public int getErro() {
@@ -32,7 +31,7 @@ public class Config {
 
     /**
      * Seta o código do erro ocorrido.
-     * 
+     *
      * @param erro código do erro.
      */
     public void setErro(int erro) {
@@ -41,7 +40,7 @@ public class Config {
 
     /**
      * Retorna o valor de plot determinado na config.
-     *      
+     *
      * @return 0 = não plotar o gráfico 1= plotar o gráfico.
      */
     public int getPlot() {
@@ -50,7 +49,7 @@ public class Config {
 
     /**
      * Retorna o nome do arquivo de entrada recebido da config.
-     * 
+     *
      * @return nome do arquivo de entrada.
      */
     public String getEntrada() {
@@ -59,7 +58,7 @@ public class Config {
 
     /**
      * Retorna o nome do arquivo de saída "output.txt"
-     * 
+     *
      * @return nome do arquivo de saída.
      */
     public String getSaida() {
@@ -68,18 +67,17 @@ public class Config {
 
     /**
      * Retorna o escalonador a ser utilizado determinado na config.
-     * 
+     *
      * @return código do escalonador a ser utilizado.
      */
     public int getIdEscalonador() {
         return idEscalonador;
     }
 
-
     /**
-     * Carrega o arquivo "config.txt" na memória.
-     * Seta os parâmetros: entrada, plot e escalonador.
-     * 
+     * Carrega o arquivo "config.txt" na memória. Seta os parâmetros: entrada,
+     * plot e escalonador.
+     *
      * @throws IOException caso exista problema na leitura.
      */
     public void loadConfig() throws IOException {

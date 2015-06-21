@@ -1,8 +1,7 @@
 
-
 /**
  *
- * @author 
+ * @author
  */
 public class ChegaEvt extends Evento {
 

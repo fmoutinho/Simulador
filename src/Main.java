@@ -3,7 +3,7 @@ import java.io.IOException;
 
 /**
  *
- * @author 
+ * @author
  */
 public class Main {
 

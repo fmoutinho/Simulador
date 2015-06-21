@@ -3,7 +3,7 @@ import java.io.IOException;
 
 /**
  *
- * @author 
+ * @author
  */
 public class Simulador {
 
@@ -25,7 +25,7 @@ public class Simulador {
 
             Carregador c = new Carregador(estrutura);
             c.run();
-            
+
             int idEscalonador = estrutura.getConfig().getIdEscalonador();
             //Cria Factory
             EscalonadorFactory factory = new EscalonadorFactory(estrutura);
@@ -35,11 +35,13 @@ public class Simulador {
             BuscadorDeEventos b = new BuscadorDeEventos(estrutura);
             b.run();
 
-            estrutura.printLog();
+            Saida saida = new Saida(estrutura);
+            saida.printLog();
 
             if (estrutura.getConfig().getPlot() == 1) {
-                estrutura.geraPlot();
+                saida.geraPlot();
             }
+
         }
 
     }

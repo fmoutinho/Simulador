@@ -8,33 +8,34 @@
  *
  * @author gvpm
  */
-public class EscalonadorFIFO extends Escalonador {
+public class EscalonadorSJF extends Escalonador {
 
     /**
      *
      * @param e
      */
-    public EscalonadorFIFO(Estruturas e) {
+    public EscalonadorSJF(Estruturas e) {
         super(e);
     }
 
     @Override
     public void esvaziaFilaEscalonador() {
+
         while (!estrutura.isFilaEscalonadorEmpty()) {
 
             estrutura.addFilaProntos(estrutura.removeProximoFilaEscalonador());
 
         }
+
     }
 
     @Override
     public Processo proximoProcesso() {
         if (estrutura.isFilaProntosEmpty() || (estrutura.isCpuBusy())) {
             return null;
-        } //if(estrutura.filaProntosIsEmpty())return null;
-        else {
-            Processo r = estrutura.removeProximoPronto();
+        } else {
 
+            Processo r = estrutura.removeMenorTempoRestantePronto();
             return r;
         }
     }

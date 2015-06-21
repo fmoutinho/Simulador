@@ -1,8 +1,9 @@
 
+import java.util.Comparator;
 
 /**
  *
- * @author 
+ * @author
  */
 public class Processo {
 
@@ -21,7 +22,7 @@ public class Processo {
         this.id = id;
         this.tempoChegada = tempoChegada;
         this.tempoExec = tempoExec;
-        this.tempoRestante = -1;
+        this.tempoRestante = tempoExec;
     }
 
     /**

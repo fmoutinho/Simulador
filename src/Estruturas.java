@@ -1,16 +1,11 @@
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
-import java.io.File;
-import javax.swing.JOptionPane;
 
 /**
  *
- * @author 
+ * @author
  */
 public class Estruturas {
 
@@ -36,8 +31,11 @@ public class Estruturas {
         this.cpu = null;
         this.config = c;
         this.erro = 0;
-               
 
+    }
+
+    public List<LogLine> getLog() {
+        return log;
     }
 
     /**
@@ -47,12 +45,16 @@ public class Estruturas {
     public int getErro() {
         return erro;
     }
-    
-    public void setEscalonador(Escalonador e){
+
+    public List<Processo> getFilaProntos() {
+        return filaProntos;
+    }
+
+    public void setEscalonador(Escalonador e) {
         this.escalonador = e;
     }
-    
-    public Escalonador getEscalonador(){
+
+    public Escalonador getEscalonador() {
         return escalonador;
     }
 
@@ -178,14 +180,38 @@ public class Estruturas {
      *
      * @return
      */
+    public Processo removeMenorTempoRestantePronto() {
+        int tamanho = filaProntos.size();
+        int min = 0;
+        int minIndex = 0;
+        for (int i = 0; i < tamanho; i++) {
+            if (i == 0) {
+                min = filaProntos.get(i).getTempoRestante();
+                minIndex = 0;
+            } else if (filaProntos.get(i).getTempoRestante() < min) {
+                min = filaProntos.get(i).getTempoRestante();
+                minIndex = i;
+
+            }
+
+        }
+
+        return filaProntos.remove(minIndex);
+
+    }
+
+    /**
+     *
+     * @return
+     */
     public boolean isFilaProntosEmpty() {
         return filaProntos.isEmpty();
 
     }
-    
+
     /**
      *
-     * 
+     *
      */
     void addCpu(Processo p) {
         this.cpu = p;
@@ -242,57 +268,6 @@ public class Estruturas {
      */
     public void addLogLine(LogLine l) {
         log.add(l);
-
-    }
-
-    /**
-     *
-     */
-    public void printLog() {
-
-        FileWriter arq = null;
-        PrintWriter gravarArq;
-        try {
-            arq = new FileWriter(config.getSaida());
-
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao criar o arquivo de saída.");
-            setErro(3);
-
-        }
-        gravarArq = new PrintWriter(arq);
-        while (!log.isEmpty()) {
-
-            gravarArq.println(log.get(0).toString());
-            gravarArq.flush();
-
-            log.remove(0);
-
-        }
-        gravarArq.close();
-
-    }
-
-    /**
-     *
-     */
-    public void geraPlot() {
-        File file = new File("plot.sh");
-
-        try {
-            Runtime.getRuntime().exec("chmod +x" + file.getAbsolutePath());
-
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao gerar o Plot.\n\nVerifique se o gnuplot está instalado.\nVerifique se os arquivos 'plot.gnu' e 'plot.sh' estão na pasta.");
-            setErro(4);
-
-        }
-        try {
-            Runtime.getRuntime().exec(file.getAbsolutePath());
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao gerar o Plot.\n\nVerifique se o gnuplot está instalado.\nVerifique se os arquivos 'plot.gnu' e 'plot.sh' estão na pasta.");
-            setErro(4);
-        }
 
     }
 

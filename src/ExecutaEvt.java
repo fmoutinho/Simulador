@@ -1,8 +1,7 @@
 
-
 /**
  *
- * @author 
+ * @author
  */
 public class ExecutaEvt extends Evento {
 
@@ -43,11 +42,12 @@ public class ExecutaEvt extends Evento {
         LogLine l = new LogLine(t, p.getId());
         estrutura.addLogLine(l);
         int tExec;
-        if (p.getTempoRestante() == -1) {
-            tExec = p.getTempoExec();
-        } else {
-            tExec = p.getTempoRestante();
-        }
+        //-1 No tempo resrante inicial era errado, Tempo exec foi usado
+        //if (p.getTempoRestante() == -1) {
+        //    tExec = p.getTempoExec();
+        //} else {
+        tExec = p.getTempoRestante();
+        //}
 
         TerminaEvt te = new TerminaEvt(t + tExec, p, estrutura);
         estrutura.addEvento(te);

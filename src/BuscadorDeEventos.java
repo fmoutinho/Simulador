@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author 
+ * @author
  */
 public class BuscadorDeEventos {
 

@@ -1,6 +1,4 @@
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author
@@ -14,25 +12,22 @@ public class EscalonaEvt extends Evento {
      */
     int idEscalonador;
     Escalonador escalonador;
-    
+
     public EscalonaEvt(int t, Estruturas e) {
         this.t = t;
         this.estrutura = e;
         this.id = 3;
-        
+
     }
 
     /**
      *
      */
     @Override
-    public void run() {            
-       
+    public void run() {
 
-             estrutura.getEscalonador().escalona(t);
-      
+        estrutura.getEscalonador().escalona(t);
+
     }
-
-   
 
 }
