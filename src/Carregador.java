@@ -6,7 +6,8 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
- *
+ *Classe que carrega o tempo chegada e o tempo de execucao de um processo
+ * via um arquivo .txt
  * @author
  */
 public class Carregador {
@@ -23,7 +24,7 @@ public class Carregador {
 
     /**
      *
-     * @throws IOException
+     * @throws IOException caso exista algum problema na leitura do arquivo
      */
     public void run() throws IOException {
 

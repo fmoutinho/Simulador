@@ -5,7 +5,7 @@
  */
 
 /**
- *
+ * Classe que modela a politica de escalonamento FIFO
  * @author gvpm
  */
 public class EscalonadorFIFO extends Escalonador {
@@ -19,6 +19,10 @@ public class EscalonadorFIFO extends Escalonador {
     }
 
     @Override
+    /**
+     * Metodo esvazia a fila do escalonador colocando os processos na fila de 
+     * 'Prontos'
+     */
     public void esvaziaFilaEscalonador() {
         while (!estrutura.isFilaEscalonadorEmpty()) {
 
@@ -28,6 +32,10 @@ public class EscalonadorFIFO extends Escalonador {
     }
 
     @Override
+    /**
+     * Metodo checa se a fila de 'Prontos' esta vazia ou se o CPU esta ocupado
+     * senao remove o proximo processo 'Pronto'
+     */
     public Processo proximoProcesso() {
         if (estrutura.isFilaProntosEmpty() || (estrutura.isCpuBusy())) {
             return null;

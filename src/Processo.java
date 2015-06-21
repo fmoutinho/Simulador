@@ -2,7 +2,7 @@
 import java.util.Comparator;
 
 /**
- *
+ * Classe que modela o Processo
  * @author
  */
 public class Processo {

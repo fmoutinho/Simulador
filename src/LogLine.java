@@ -1,5 +1,5 @@
 
-/**
+/** Classe que modela o a linha do log com com as informacoes de saida
  *
  * @author
  */

@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * and open the template in the editor.
  */
 /**
- *
+ * Classe responsavel por criar os arquivos log de saida e gerar plot
  * @author gvpm
  */
 public class Saida {
@@ -27,7 +27,7 @@ public class Saida {
     }
 
     /**
-     *
+     * Metodo responsavel por criar um arquivo de saida com o log
      */
     public void printLog() {
 
@@ -55,7 +55,7 @@ public class Saida {
     }
 
     /**
-     *
+     * Metodo que gera e executa o plot
      */
     public void geraPlot() {
         File file = new File("plot.sh");

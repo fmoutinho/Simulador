@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
  * and open the template in the editor.
  */
 /**
- *
+ * Classe delegada a criar as Politicas de Escalonamento
  * @author gvpm
  */
 public class EscalonadorFactory {
@@ -19,7 +19,12 @@ public class EscalonadorFactory {
     public EscalonadorFactory(Estruturas estrutura) {
         this.estrutura = estrutura;
     }
-
+    /**
+     * Metodo instancia um politica de escalonamento a partir do valor 
+     * do parametro 'id'
+     * @param id
+     * @return 
+     */
     public Escalonador getEscalonador(int id) {
 
         if (id == 1) {
