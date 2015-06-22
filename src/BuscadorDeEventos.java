@@ -11,7 +11,7 @@ public class BuscadorDeEventos {
 
     /**
      *
-     * @param estrutura
+     * @param estrutura estrutura da simulacao
      */
     public BuscadorDeEventos(Estruturas estrutura) {
         this.estrutura = estrutura;

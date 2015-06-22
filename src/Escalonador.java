@@ -11,7 +11,7 @@ public abstract class Escalonador {
 
     /**
      *
-     * @param e
+     * @param e estrutura a aplicar o escalonador
      */
     public Escalonador(Estruturas e) {
 
@@ -21,7 +21,7 @@ public abstract class Escalonador {
 
     /**
      *
-     * @param t
+     * @param t tempo da simulacao para escalonar
      */
     public void escalona(int t) {
 
@@ -44,7 +44,7 @@ public abstract class Escalonador {
 
     /**
      *
-     * @return
+     * @return Proximo processo de acordo com a politica usada
      */
     public abstract Processo proximoProcesso();
 }

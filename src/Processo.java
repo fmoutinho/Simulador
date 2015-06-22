@@ -1,5 +1,4 @@
 
-import java.util.Comparator;
 
 /**
  * Classe que modela o Processo

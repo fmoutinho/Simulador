@@ -9,9 +9,9 @@ public class ExecutaEvt extends Evento {
 
     /**
      *
-     * @param t
-     * @param p
-     * @param e
+     * @param t tempo na simulacao
+     * @param p processo a ser executado
+     * @param e estrutura da simulacao
      */
     public ExecutaEvt(int t, Processo p, Estruturas e) {
         this.t = t;

@@ -12,7 +12,7 @@ public class EscalonadorSJF extends Escalonador {
 
     /**
      *
-     * @param e
+     * @param e estrutura a aplicar o escalonador
      */
     public EscalonadorSJF(Estruturas e) {
         super(e);

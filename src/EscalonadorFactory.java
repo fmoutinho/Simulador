@@ -22,7 +22,7 @@ public class EscalonadorFactory {
     /**
      * Metodo instancia um politica de escalonamento a partir do valor 
      * do parametro 'id'
-     * @param id
+     * @param id id do escalonador na config
      * @return 
      */
     public Escalonador getEscalonador(int id) {

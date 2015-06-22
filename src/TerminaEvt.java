@@ -1,7 +1,7 @@
 
 /**
  *
- * @author
+ * @author gvpm
  */
 public class TerminaEvt extends Evento {
 
@@ -9,9 +9,9 @@ public class TerminaEvt extends Evento {
 
     /**
      *
-     * @param t
-     * @param p
-     * @param e
+     * @param t Tempo na simulacao
+     * @param p Processo que vai terminar
+     * @param e Estrutura usada na simulacao
      */
     public TerminaEvt(int t, Processo p, Estruturas e) {
         this.t = t;
@@ -36,7 +36,7 @@ public class TerminaEvt extends Evento {
 
     /**
      *
-     * @return
+     * @return processo agregado ao evento
      */
     @Override
     public Processo getP() {

@@ -4,15 +4,14 @@
  * @author
  */
 public class EscalonaEvt extends Evento {
-
-    /**
-     *
-     * @param t
-     * @param e
-     */
+    
     int idEscalonador;
     Escalonador escalonador;
-
+    /**
+     *
+     * @param t tempo na simulacao
+     * @param e estrutura da simulacao
+     */
     public EscalonaEvt(int t, Estruturas e) {
         this.t = t;
         this.estrutura = e;

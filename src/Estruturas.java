@@ -20,7 +20,7 @@ public class Estruturas {
 
     /**
      *
-     * @param c
+     * @param c configuracao a ser utilizada na simulacao
      */
     public Estruturas(Config c) {
 
