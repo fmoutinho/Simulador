@@ -2,13 +2,17 @@
 import java.io.IOException;
 
 /**
+ * Classe de controle que implementa e executa o fluxo da simulacao
  *
- * @author
+ * @author gvpm
  */
 public class Simulador {
 
     private Estruturas estrutura;
 
+    /**
+     *
+     */
     public Simulador() {
 
     }

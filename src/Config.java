@@ -6,8 +6,10 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
+ * Classe que modela uma a configuração, e carrega seus parametros via arquivo
+ * .txt
  *
- * @author
+ * @author gvpm
  */
 public class Config {
 
@@ -16,6 +18,9 @@ public class Config {
     private int idEscalonador, plot;
     private int erro = 0;
 
+    /**
+     *
+     */
     public void Config() {
 
     }

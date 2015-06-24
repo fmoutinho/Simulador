@@ -1,13 +1,9 @@
 
 import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  * Classe delegada a criar as Politicas de Escalonamento
+ *
  * @author gvpm
  */
 public class EscalonadorFactory {
@@ -16,14 +12,20 @@ public class EscalonadorFactory {
 
     Estruturas estrutura;
 
+    /**
+     *
+     * @param estrutura
+     */
     public EscalonadorFactory(Estruturas estrutura) {
         this.estrutura = estrutura;
     }
+
     /**
-     * Metodo instancia um politica de escalonamento a partir do valor 
-     * do parametro 'id'
+     * Metodo instancia um politica de escalonamento a partir do valor do
+     * parametro 'id'
+     *
      * @param id id do escalonador na config
-     * @return 
+     * @return
      */
     public Escalonador getEscalonador(int id) {
 

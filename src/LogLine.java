@@ -1,5 +1,6 @@
 
-/** Classe que modela a linha do log com com as informacoes de saida
+/**
+ * Classe que modela a linha do log com com as informacoes de saida
  *
  * @author
  */
@@ -19,7 +20,8 @@ public class LogLine {
     }
 
     /**
-     *  Define o tempo de saida de uma linha do log
+     * Define o tempo de saida de uma linha do log
+     *
      * @param tempoSaida
      */
     public void setTempoSaida(int tempoSaida) {
@@ -27,7 +29,8 @@ public class LogLine {
     }
 
     /**
-     *  Seta 1 se o processo tiver terminado naquele momento
+     * Seta 1 se o processo tiver terminado naquele momento
+     *
      * @param termino 1 para termino 0 para nao termino
      */
     public void setTermino(int termino) {
@@ -35,7 +38,7 @@ public class LogLine {
     }
 
     /**
-     *   
+     *
      * @return
      */
     public int getTempoEntrada() {
@@ -68,6 +71,7 @@ public class LogLine {
 
     /**
      * Converte as informacoes da linha do log para string
+     *
      * @return String de uma linha do log
      */
     @Override

@@ -1,7 +1,8 @@
 
 /**
+ * Classe que modela o evento de execucao de um processo
  *
- * @author
+ * @author gvpm
  */
 public class ExecutaEvt extends Evento {
 
@@ -21,6 +22,12 @@ public class ExecutaEvt extends Evento {
     }
 
     /**
+     * Verifica se existe um processo na cpu (Caso exista): -Remove o evento de
+     * termino desse processo da cpu -Altera seu tempo restante -Adiciona ele na
+     * fila do escalonador -Ajusta o log atual com o tempo de saida e o
+     * indicador de termino 0 (Independente da existencia de um processo na
+     * cpu): -Adiciona o processo do evento na cpu -Cria uma nova linha de log
+     * -Cria um evento de termino para o novo processo
      *
      */
     @Override

@@ -1,5 +1,6 @@
 
 /**
+ * Classe que modela um evento de termino de um processo
  *
  * @author gvpm
  */
@@ -21,7 +22,8 @@ public class TerminaEvt extends Evento {
     }
 
     /**
-     *
+     * - Remove o processo da cpu - Cria o evento de escalonador para o tempo
+     * atual - Ajusta alinha de log atual
      */
     @Override
     public void run() {

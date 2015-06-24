@@ -1,12 +1,14 @@
 
 /**
+ * Classe que modela o evento do escalonador.
  *
- * @author
+ * @author gvpm
  */
 public class EscalonaEvt extends Evento {
-    
+
     int idEscalonador;
     Escalonador escalonador;
+
     /**
      *
      * @param t tempo na simulacao
@@ -20,7 +22,7 @@ public class EscalonaEvt extends Evento {
     }
 
     /**
-     *
+     * Chama o escalonador da simulacao para o tempo atual
      */
     @Override
     public void run() {

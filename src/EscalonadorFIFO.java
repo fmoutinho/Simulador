@@ -1,13 +1,15 @@
 
 /**
- * Classe que modela a politica de escalonamento FIFO
+ * Classe que modela o escalonador especifico com a politica de escalonamento
+ * FIFO
+ *
  * @author gvpm
  */
 public class EscalonadorFIFO extends Escalonador {
 
     /**
      *
-     * @param e
+     * @param e estrutura onde o escalonador vai atuar
      */
     public EscalonadorFIFO(Estruturas e) {
         super(e);
@@ -15,7 +17,7 @@ public class EscalonadorFIFO extends Escalonador {
 
     @Override
     /**
-     * Metodo esvazia a fila do escalonador colocando os processos na fila de 
+     * Metodo esvazia a fila do escalonador colocando os processos na fila de
      * 'Prontos'
      */
     public void esvaziaFilaEscalonador() {
@@ -29,7 +31,7 @@ public class EscalonadorFIFO extends Escalonador {
     @Override
     /**
      * Metodo checa se a fila de 'Prontos' esta vazia ou se o CPU esta ocupado
-     * senao remove o proximo processo 'Pronto'
+     * caso nao, remove o proximo processo 'Pronto'
      */
     public Processo proximoProcesso() {
         if (estrutura.isFilaProntosEmpty() || (estrutura.isCpuBusy())) {

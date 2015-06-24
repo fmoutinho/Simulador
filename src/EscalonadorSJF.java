@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
+ * Classe que modela o escalonador especifico com a politica de escalonamento
+ * Shortest Job First
  *
  * @author gvpm
  */
@@ -12,13 +9,17 @@ public class EscalonadorSJF extends Escalonador {
 
     /**
      *
-     * @param e estrutura a aplicar o escalonador
+     * @param e estrutura onde o escalonador vai atuar
      */
     public EscalonadorSJF(Estruturas e) {
         super(e);
     }
 
     @Override
+    /**
+     * Metodo esvazia a fila do escalonador colocando os processos na fila de
+     * 'Prontos'
+     */
     public void esvaziaFilaEscalonador() {
 
         while (!estrutura.isFilaEscalonadorEmpty()) {
@@ -30,6 +31,10 @@ public class EscalonadorSJF extends Escalonador {
     }
 
     @Override
+    /**
+     * Metodo checa se a fila de 'Prontos' esta vazia ou se o CPU esta ocupado
+     * caso nao, remove o processo com menor tempo restante
+     */
     public Processo proximoProcesso() {
         if (estrutura.isFilaProntosEmpty() || (estrutura.isCpuBusy())) {
             return null;

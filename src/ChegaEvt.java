@@ -1,7 +1,8 @@
 
 /**
+ * Classe que modela o evento da chegada de um processo
  *
- * @author
+ * @author gvpm
  */
 public class ChegaEvt extends Evento {
 
@@ -21,6 +22,8 @@ public class ChegaEvt extends Evento {
     }
 
     /**
+     * Adiciona o processo na fila do escalonador Cria um evento de chamada do
+     * escalonador para o tempo atual
      *
      */
     @Override

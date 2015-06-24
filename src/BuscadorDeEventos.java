@@ -2,14 +2,16 @@
 import javax.swing.JOptionPane;
 
 /**
+ * Classe responsavel por pegar o proximo evento da lista de eventos e executar
  *
- * @author
+ * @author gvpm
  */
 public class BuscadorDeEventos {
 
     private final Estruturas estrutura;
 
     /**
+     *
      *
      * @param estrutura estrutura da simulacao
      */

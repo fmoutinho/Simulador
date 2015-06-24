@@ -6,9 +6,10 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
- *Classe que carrega o tempo chegada e o tempo de execucao de um processo
- * via um arquivo .txt
- * @author
+ * Classe que carrega o tempo chegada e o tempo de execucao de um processo via
+ * um arquivo .txt
+ *
+ * @author gvpm
  */
 public class Carregador {
 
@@ -23,6 +24,7 @@ public class Carregador {
     }
 
     /**
+     * Carrega a fila de eventos com eventos de chegada para os processos
      *
      * @throws IOException caso exista algum problema na leitura do arquivo
      */

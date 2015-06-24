@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
-
 /**
  * Classe responsavel por criar os arquivos log de saida e gerar plot
+ *
  * @author gvpm
  */
 public class Saida {

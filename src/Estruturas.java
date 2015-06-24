@@ -4,8 +4,11 @@ import java.util.List;
 import java.util.ListIterator;
 
 /**
+ * Classe chave da simulacao, contem todas as estruturas e metodos necessarios
+ * para a execucao da simulacao, o escalonador a ser utilizado e a config
+ * carregada.
  *
- * @author
+ * @author gvpm
  */
 public class Estruturas {
 
@@ -34,6 +37,10 @@ public class Estruturas {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public List<LogLine> getLog() {
         return log;
     }
@@ -46,14 +53,26 @@ public class Estruturas {
         return erro;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Processo> getFilaProntos() {
         return filaProntos;
     }
 
+    /**
+     *
+     * @param e
+     */
     public void setEscalonador(Escalonador e) {
         this.escalonador = e;
     }
 
+    /**
+     *
+     * @return
+     */
     public Escalonador getEscalonador() {
         return escalonador;
     }
@@ -68,7 +87,7 @@ public class Estruturas {
 
     /**
      *
-     * @param e
+     * @param e evento a ser adicionado
      */
     public void addEvento(Evento e) {
         ListIterator li = filaEventos.listIterator();
@@ -95,7 +114,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return evento removido
      */
     public Evento removeProxEvento() {
 
@@ -104,9 +123,10 @@ public class Estruturas {
     }
 
     /**
+     * Metodo para retirar um evento de termino de determinado processo
      *
-     * @param p
-     * @return
+     * @param p processo do evento termina que deseja se retirar
+     * @return evento de termino do processo retirado
      */
     public Evento removeEventoTermina(Processo p) {
         ListIterator li = filaEventos.listIterator();
@@ -125,7 +145,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return true: fila vazia false: fila nao vazia
      */
     public boolean isFilaEventosEmpty() {
         return filaEventos.isEmpty();
@@ -134,7 +154,7 @@ public class Estruturas {
 
     /**
      *
-     * @param p
+     * @param p processo a ser adicionado
      */
     public void addFilaEscalonador(Processo p) {
 
@@ -143,7 +163,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return processo removido
      */
     public Processo removeProximoFilaEscalonador() {
         return filaEscalonador.remove(0);
@@ -152,7 +172,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return false: fila escalonador nao vazia true:fila escalonador vazia
      */
     public boolean isFilaEscalonadorEmpty() {
         return filaEscalonador.isEmpty();
@@ -161,7 +181,7 @@ public class Estruturas {
 
     /**
      *
-     * @param p
+     * @param p processo a ser adicionado
      */
     public void addFilaProntos(Processo p) {
         filaProntos.add(p);
@@ -169,7 +189,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return proximo processo da fila de prontos
      */
     public Processo removeProximoPronto() {
         return filaProntos.remove(0);
@@ -177,8 +197,10 @@ public class Estruturas {
     }
 
     /**
+     * Metodo para retirar o processo com menos tempo restante da lista de
+     * prontos
      *
-     * @return
+     * @return processo com menor tempo restante da lista
      */
     public Processo removeMenorTempoRestantePronto() {
         int tamanho = filaProntos.size();
@@ -202,7 +224,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return true: fila de prontos vazia false: fila de prontos nao vazia
      */
     public boolean isFilaProntosEmpty() {
         return filaProntos.isEmpty();
@@ -211,7 +233,7 @@ public class Estruturas {
 
     /**
      *
-     *
+     * @param p processo a ser adicionado
      */
     void addCpu(Processo p) {
         this.cpu = p;
@@ -219,7 +241,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return o processo removido
      */
     public Processo removeCPU() {
         Processo p = cpu;
@@ -229,7 +251,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return o processo da cpu
      */
     public Processo cpuCheck() {
         Processo p = cpu;
@@ -238,7 +260,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return true: cpu ocupada false: cpu vazia
      */
     public boolean isCpuBusy() {
         return cpu != null;
@@ -246,7 +268,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return configuracao da simulacao
      */
     public Config getConfig() {
         return config;
@@ -254,7 +276,7 @@ public class Estruturas {
 
     /**
      *
-     * @return
+     * @return log mais atual na lista de logs
      */
     public LogLine getLogAtual() {
 
@@ -264,7 +286,7 @@ public class Estruturas {
 
     /**
      *
-     * @param l
+     * @param l linha de log a ser adicionada
      */
     public void addLogLine(LogLine l) {
         log.add(l);

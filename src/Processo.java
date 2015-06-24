@@ -1,8 +1,8 @@
 
-
 /**
  * Classe que modela o Processo
- * @author
+ *
+ * @author gvpm
  */
 public class Processo {
 

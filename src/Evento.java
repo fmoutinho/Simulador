@@ -2,8 +2,9 @@
 import java.util.Comparator;
 
 /**
+ * Classe que representa um evento abstrato
  *
- * @author
+ * @author gvpm
  */
 public abstract class Evento implements Comparator {
 
@@ -11,13 +12,17 @@ public abstract class Evento implements Comparator {
 
     Estruturas estrutura;
 
+    /**
+     *
+     */
     public void run() {
 
     }
 
     /**
+     * Retorna o tempo do evento
      *
-     * @return
+     * @return tempo na simulacao
      */
     public int getT() {
         return t;
@@ -25,18 +30,23 @@ public abstract class Evento implements Comparator {
 
     /**
      *
-     * @return
+     * @return id do tipo do evento
      */
     public int getId() {
         return id;
     }
 
+    /**
+     *
+     * @return processo do evento, caso exista
+     */
     public Processo getP() {
         return null;
     }
 
     /**
-     *
+     * Metodo "compare" implementada para fazer o evento ser comparavel e
+     * possobilitar a utilizacao do metodo sort
      *
      */
     @Override
