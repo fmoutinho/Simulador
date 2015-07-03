@@ -11,6 +11,6 @@ sched_type:2
 
 //Com "plot = 1" o Programa vai gerar um grafico .pdf e um .ps representando a simulacao.
 //Coloque 1 em plot somente se estiver rodando em Linux com gnuplot instalado.
-plot:0
+plot:1
 
 
