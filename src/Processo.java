@@ -26,7 +26,7 @@ public class Processo {
 
     /**
      *
-     * @return
+     * @return id do processo
      */
     public int getId() {
         return id;
@@ -34,7 +34,7 @@ public class Processo {
 
     /**
      *
-     * @return
+     * @return tempo de chegada do processo
      */
     public int getTempoChegada() {
         return tempoChegada;
@@ -42,7 +42,7 @@ public class Processo {
 
     /**
      *
-     * @return
+     * @return tempo de execucao do processo
      */
     public int getTempoExec() {
         return tempoExec;
@@ -50,15 +50,15 @@ public class Processo {
 
     /**
      *
-     * @return
+     * @return tempo restante do processo
      */
     public int getTempoRestante() {
         return tempoRestante;
     }
 
     /**
-     *
-     * @param tempoRestante
+     * Modifica o tempo restante do processo
+     * @param tempoRestante novo tempo restante
      */
     public void setTempoRestante(int tempoRestante) {
         this.tempoRestante = tempoRestante;

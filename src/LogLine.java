@@ -39,7 +39,7 @@ public class LogLine {
 
     /**
      *
-     * @return
+     * @return tempo de entrada do processo
      */
     public int getTempoEntrada() {
         return tempoEntrada;
@@ -47,7 +47,7 @@ public class LogLine {
 
     /**
      *
-     * @return
+     * @return tepo de saida do processo
      */
     public int getTempoSaida() {
         return tempoSaida;
@@ -55,7 +55,7 @@ public class LogLine {
 
     /**
      *
-     * @return
+     * @return id do processo
      */
     public int getId() {
         return id;
@@ -63,7 +63,7 @@ public class LogLine {
 
     /**
      *
-     * @return
+     * @return se o processo terminou ou nao
      */
     public int getTermino() {
         return termino;

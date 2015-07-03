@@ -23,6 +23,7 @@ public class Estruturas {
 
     /**
      * Metodo Construtor
+     *
      * @param c configuracao a ser utilizada na simulacao
      */
     public Estruturas(Config c) {
@@ -86,6 +87,9 @@ public class Estruturas {
     }
 
     /**
+     * Adifiona um evento novo a estrutura - caso seja um evento de escalonador
+     * verifica se ja nao existe um igual - ordena a fila de acordo com o tempo
+     * e a prioridade de cada tipo de evento
      *
      * @param e evento a ser adicionado
      */

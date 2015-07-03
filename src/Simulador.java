@@ -18,6 +18,9 @@ public class Simulador {
     }
 
     /**
+     * Cria a config - carrega a config - cria a base de estruturas - cria o
+     * escalonador - - carrega input na base - cria o buscador de eventos - roda
+     * o buscador de eventos - gera as saidas
      *
      * @throws IOException
      */

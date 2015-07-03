@@ -20,7 +20,7 @@ public class BuscadorDeEventos {
     }
 
     /**
-     *
+     *  Remove o proximo evento da fila de estrutura e executa
      */
     public void run() {
 

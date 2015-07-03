@@ -48,6 +48,9 @@ public abstract class Evento implements Comparator {
      * Metodo "compare" implementada para fazer o evento ser comparavel e
      * possobilitar a utilizacao do metodo sort
      *
+     * Faz a comparacao pelo tempo e caso o tempo seja igual faz a comparacao
+     * pela ID do evento respeitando as prioridades de execucao dos eventos
+     *
      */
     @Override
     public int compare(Object o1, Object o2) {
