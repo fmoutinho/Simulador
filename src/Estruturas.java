@@ -22,7 +22,7 @@ public class Estruturas {
     private Escalonador escalonador;
 
     /**
-     *
+     * Metodo Construtor
      * @param c configuracao a ser utilizada na simulacao
      */
     public Estruturas(Config c) {
@@ -145,7 +145,7 @@ public class Estruturas {
 
     /**
      *
-     * @return true: fila vazia false: fila nao vazia
+     * @return true: fila vazia; false: fila nao vazia
      */
     public boolean isFilaEventosEmpty() {
         return filaEventos.isEmpty();

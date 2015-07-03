@@ -10,7 +10,7 @@ public class LogLine {
     private int tempoSaida, termino;
 
     /**
-     *
+     * Metodo Construtor
      * @param tempoEntrada
      * @param id
      */

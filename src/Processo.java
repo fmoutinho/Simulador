@@ -12,7 +12,7 @@ public class Processo {
     private int tempoRestante;
 
     /**
-     *
+     * Metodo Construtor
      * @param id
      * @param tempoChegada
      * @param tempoExec

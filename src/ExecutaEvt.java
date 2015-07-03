@@ -9,7 +9,7 @@ public class ExecutaEvt extends Evento {
     private final Processo p;
 
     /**
-     *
+     * Metodo Construtor
      * @param t tempo na simulacao
      * @param p processo a ser executado
      * @param e estrutura da simulacao

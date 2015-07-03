@@ -9,7 +9,7 @@ public abstract class Escalonador {
     Estruturas estrutura;
 
     /**
-     *
+     * Metodo Construtor
      * @param e estrutura a aplicar o escalonador
      */
     public Escalonador(Estruturas e) {
@@ -52,4 +52,5 @@ public abstract class Escalonador {
      * @return Proximo processo de acordo com a politica usada
      */
     public abstract Processo proximoProcesso();
+
 }

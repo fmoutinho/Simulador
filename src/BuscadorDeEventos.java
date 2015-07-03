@@ -12,7 +12,7 @@ public class BuscadorDeEventos {
 
     /**
      *
-     *
+     * Metodo Construtor
      * @param estrutura estrutura da simulacao
      */
     public BuscadorDeEventos(Estruturas estrutura) {

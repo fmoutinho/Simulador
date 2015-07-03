@@ -15,7 +15,7 @@ public class Saida {
     Estruturas estrutura;
 
     /**
-     *
+     * Metodo Construtor
      * @param estrutura
      */
     public Saida(Estruturas estrutura) {

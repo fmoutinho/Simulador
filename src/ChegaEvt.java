@@ -9,7 +9,7 @@ public class ChegaEvt extends Evento {
     Processo p;
 
     /**
-     *
+     * Metodo Construtor
      * @param t
      * @param p
      * @param e

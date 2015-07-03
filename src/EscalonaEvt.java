@@ -10,7 +10,7 @@ public class EscalonaEvt extends Evento {
     Escalonador escalonador;
 
     /**
-     *
+     * Metodo Construtor
      * @param t tempo na simulacao
      * @param e estrutura da simulacao
      */

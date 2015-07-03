@@ -16,7 +16,7 @@ public class Carregador {
     private final Estruturas estrutura;
 
     /**
-     *
+     * Metodo Construtor
      * @param estrutura
      */
     public Carregador(Estruturas estrutura) {

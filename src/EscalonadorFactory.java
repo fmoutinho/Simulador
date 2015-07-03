@@ -13,7 +13,7 @@ public class EscalonadorFactory {
     Estruturas estrutura;
 
     /**
-     *
+     * Metodo Construtor
      * @param estrutura
      */
     public EscalonadorFactory(Estruturas estrutura) {
@@ -21,11 +21,11 @@ public class EscalonadorFactory {
     }
 
     /**
-     * Metodo instancia um politica de escalonamento a partir do valor do
+     * Metodo instancia uma politica de escalonamento a partir do valor do
      * parametro 'id'
      *
-     * @param id id do escalonador na config
-     * @return
+     * @param id do escalonador na config
+     * @return a politica de escalonamento instanciada
      */
     public Escalonador getEscalonador(int id) {
 

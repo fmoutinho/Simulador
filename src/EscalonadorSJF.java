@@ -8,7 +8,7 @@
 public class EscalonadorSJF extends Escalonador {
 
     /**
-     *
+     * Metodo Construtor
      * @param e estrutura onde o escalonador vai atuar
      */
     public EscalonadorSJF(Estruturas e) {

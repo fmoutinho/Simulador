@@ -6,7 +6,7 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
- * Classe que modela uma a configuração, e carrega seus parametros via arquivo
+ * Classe que modela uma configuração, e carrega seus parametros via arquivo
  * .txt
  *
  * @author gvpm

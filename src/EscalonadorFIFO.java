@@ -32,6 +32,7 @@ public class EscalonadorFIFO extends Escalonador {
     /**
      * Metodo checa se a fila de 'Prontos' esta vazia ou se o CPU esta ocupado
      * caso nao, remove o proximo processo 'Pronto'
+     * @return o proximo processo
      */
     public Processo proximoProcesso() {
         if (estrutura.isFilaProntosEmpty() || (estrutura.isCpuBusy())) {

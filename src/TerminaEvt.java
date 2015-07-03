@@ -9,7 +9,7 @@ public class TerminaEvt extends Evento {
     private final Processo p;
 
     /**
-     *
+     * Metodo Construtor
      * @param t Tempo na simulacao
      * @param p Processo que vai terminar
      * @param e Estrutura usada na simulacao
@@ -37,7 +37,7 @@ public class TerminaEvt extends Evento {
     }
 
     /**
-     *
+     * Funcao que retorna o agragado ao evento
      * @return processo agregado ao evento
      */
     @Override
